@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+* {
+  padding: 0;
+}
+.App {
+  height: 100vh;
+  background: palegreen;
+}
+.one, .two, .three {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  position: absolute;
+}
+ul {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+li {
+  display: flex;
+  padding: 1rem;
+  list-style-position: inside;
+  width: fit-content
+}
+li::before {
+  content: '•';
+  font-family: dosis;
+  font-size: 1.5em;
+  position: relative;
+  padding-right: 0.25em;
+  top: 40%;
+  line-height: 1;
+  text-align: center;
+  transform: translateY(-50%);
+}
+a {
+  width: fit-content;
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-family: dosis;
+  font-size: 1.1em;
+  border-radius: 35px;
+  border: solid 1px ;
+  padding-inline: 0.5em;
+  text-align: center;
+  line-height: 1; 
+}
+a:active{
+  color: black;
+}
+h1 {
+  
+  font-family: raleway;
+  /* font-weight: 500; */
+  text-transform: capitalize;
+  font-size: 3em;
+  color: black;
+  transition:  color 0.3s;
+}
+.hideone {
+  background: white;
+}
+.one {background: greenyellow;
+transition: background 0.3s;}
+.one2 {
+  background: pink;
+}
+
+.one2 h1 {color: white !important}
+.one h1 {
+  color: rgb(85, 81, 87);
+}
+.two {
+  background: slateblue;
+  flex-direction: column;
+}
+.two nav {
+  position: static;
+  display: flex;
+  font-size: 1.1em;
+}
+
+.three {
+  background: mistyrose;
+  flex-direction: column;overflow-x: hidden;
+}
+
+
+.three div {
+  display: flex;
+  align-self: baseline;
+  border: solid 1px dimgray;
+  animation: line 12s linear infinite;
+  will-change: transfrom;
+  
+}
+
+@keyframes line {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.three div p {
+  font-family: raleway;
+  font-size: 3em;
+  white-space: nowrap;
+  margin: 0.3em;
+}
